@@ -1,0 +1,47 @@
+{
+  "doc_id": "nimbus-faq-technical",
+  "title": "Technical FAQ",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-faq-technical::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Does Nimbus work without an internet connection?",
+      "source_type": "prose",
+      "text": "Locally-evaluated routines and manual device control over the local network keep working during an outage. Remote access, cloud recording, and voice assistants require the cloud connection."
+    },
+    {
+      "chunk_id": "nimbus-faq-technical::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Why am I hitting rate limit errors?",
+      "source_type": "prose",
+      "text": "You are exceeding your plan's allowed API requests per minute; see the API rate limits table in the pricing documentation for your plan's exact limit."
+    },
+    {
+      "chunk_id": "nimbus-faq-technical::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "How many active routines can I have?",
+      "source_type": "prose",
+      "text": "Each account can have up to 50 active routines, per the automation limits section of the automations guide."
+    },
+    {
+      "chunk_id": "nimbus-faq-technical::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "Can I export all of my data?",
+      "source_type": "prose",
+      "text": "Yes, from Settings > Data Export you can download a CSV export containing your devices, rooms, and automations."
+    },
+    {
+      "chunk_id": "nimbus-faq-technical::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Is there a public status page?",
+      "source_type": "prose",
+      "text": "status.nimbus.example shows current uptime and a history of past incidents."
+    }
+  ]
+}

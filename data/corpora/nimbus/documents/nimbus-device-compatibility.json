@@ -1,0 +1,23 @@
+{
+  "doc_id": "nimbus-device-compatibility",
+  "title": "Device Compatibility Reference",
+  "doc_type": "table",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-device-compatibility::c0",
+      "position": 0,
+      "doc_chunk_count": 2,
+      "heading": "Supported protocols table",
+      "source_type": "table",
+      "text": "| Protocol | Pairing method |\n|---|---|\n| Zigbee | Automatic once in pairing mode |\n| Z-Wave | Automatic once in pairing mode |\n| Wi-Fi | Requires network password |\n| Bluetooth | Requires phone in range during setup |"
+    },
+    {
+      "chunk_id": "nimbus-device-compatibility::c1",
+      "position": 1,
+      "doc_chunk_count": 2,
+      "heading": "Supported device types table",
+      "source_type": "table",
+      "text": "| Type | Examples |\n|---|---|\n| Smart lock | Deadbolt, padlock |\n| Sensor | Door/window, motion, water leak |\n| Light | Bulb, dimmer switch |\n| Camera | Indoor, outdoor, doorbell |"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "doc_id": "nimbus-system-requirements",
+  "title": "System Requirements",
+  "doc_type": "table",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-system-requirements::c0",
+      "position": 0,
+      "doc_chunk_count": 3,
+      "heading": "Hub requirements table",
+      "source_type": "table",
+      "text": "| Requirement | Minimum |\n|---|---|\n| Wi-Fi | 2.4 GHz, WPA2 |\n| Power | USB-C, 5W |\n| Internet | 5 Mbps for cloud features |"
+    },
+    {
+      "chunk_id": "nimbus-system-requirements::c1",
+      "position": 1,
+      "doc_chunk_count": 3,
+      "heading": "Mobile app requirements table",
+      "source_type": "table",
+      "text": "| Platform | Minimum version |\n|---|---|\n| iOS | 15 |\n| Android | 10 |"
+    },
+    {
+      "chunk_id": "nimbus-system-requirements::c2",
+      "position": 2,
+      "doc_chunk_count": 3,
+      "heading": "Browser support table",
+      "source_type": "table",
+      "text": "| Browser | Minimum version |\n|---|---|\n| Chrome | 100 |\n| Firefox | 100 |\n| Safari | 15 |\n| Edge | 100 |"
+    }
+  ]
+}

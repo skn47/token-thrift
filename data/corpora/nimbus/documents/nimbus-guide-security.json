@@ -1,0 +1,39 @@
+{
+  "doc_id": "nimbus-guide-security",
+  "title": "Nimbus Security Practices",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-guide-security::c0",
+      "position": 0,
+      "doc_chunk_count": 4,
+      "heading": "Data encryption",
+      "source_type": "prose",
+      "text": "All device data is encrypted at rest using AES-256 and in transit using TLS 1.3, both between the hub and your devices and between the hub and the Nimbus cloud."
+    },
+    {
+      "chunk_id": "nimbus-guide-security::c1",
+      "position": 1,
+      "doc_chunk_count": 4,
+      "heading": "Two-factor authentication",
+      "source_type": "prose",
+      "text": "Two-factor authentication using an authenticator app is available to every account, and an Owner can require it for every household member from Security Settings."
+    },
+    {
+      "chunk_id": "nimbus-guide-security::c2",
+      "position": 2,
+      "doc_chunk_count": 4,
+      "heading": "Firmware updates",
+      "source_type": "prose",
+      "text": "The hub checks for firmware updates nightly and installs security patches automatically. Feature updates are optional and can be deferred from Settings > Firmware."
+    },
+    {
+      "chunk_id": "nimbus-guide-security::c3",
+      "position": 3,
+      "doc_chunk_count": 4,
+      "heading": "Local vs. cloud processing",
+      "source_type": "prose",
+      "text": "Motion detection and routine evaluation run locally on the hub, so most automations keep working during an internet outage. Voice assistant integration and remote access require the cloud connection."
+    }
+  ]
+}

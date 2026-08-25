@@ -1,0 +1,23 @@
+{
+  "doc_id": "field-reference",
+  "title": "Task Field Reference",
+  "doc_type": "table",
+  "chunks": [
+    {
+      "chunk_id": "field-reference::c0",
+      "position": 0,
+      "doc_chunk_count": 2,
+      "heading": "Core fields table",
+      "source_type": "table",
+      "text": "| Field | Type | Description |\n|---|---|---|\n| id | string | Unique task identifier |\n| title | string | Task name |\n| status | enum | todo, in_progress, or done |\n| priority | enum | low, medium, or high |\n| due_date | date | Optional due date |"
+    },
+    {
+      "chunk_id": "field-reference::c1",
+      "position": 1,
+      "doc_chunk_count": 2,
+      "heading": "Custom field types table",
+      "source_type": "table",
+      "text": "| Type | Max per project |\n|---|---|\n| text | 20 |\n| number | 20 |\n| dropdown | 10 |\n| checkbox | 20 |\n| date | 10 |"
+    }
+  ]
+}

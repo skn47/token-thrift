@@ -1,0 +1,39 @@
+{
+  "doc_id": "nimbus-guide-automations",
+  "title": "Building Automations",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-guide-automations::c0",
+      "position": 0,
+      "doc_chunk_count": 4,
+      "heading": "Creating a routine",
+      "source_type": "prose",
+      "text": "A routine runs a set of actions when its trigger fires. Create one from the Automations tab by choosing a trigger device or time, then adding one or more actions such as turning on a light or locking a door."
+    },
+    {
+      "chunk_id": "nimbus-guide-automations::c1",
+      "position": 1,
+      "doc_chunk_count": 4,
+      "heading": "Triggers and conditions",
+      "source_type": "prose",
+      "text": "A routine's trigger starts the evaluation; optional conditions (like time of day or whether anyone is home) must all be true before the actions run. A routine with no conditions runs every time its trigger fires."
+    },
+    {
+      "chunk_id": "nimbus-guide-automations::c2",
+      "position": 2,
+      "doc_chunk_count": 4,
+      "heading": "Scenes",
+      "source_type": "prose",
+      "text": "A scene is a saved set of device states, such as \"Movie Night\" dimming the lights and closing the blinds. Scenes can be triggered manually from the app or included as an action inside a routine."
+    },
+    {
+      "chunk_id": "nimbus-guide-automations::c3",
+      "position": 3,
+      "doc_chunk_count": 4,
+      "heading": "Automation limits",
+      "source_type": "prose",
+      "text": "Each Nimbus account can have up to 50 active routines. Routines that reference a deleted device are automatically disabled rather than deleted, so they can be repointed at a replacement device later."
+    }
+  ]
+}

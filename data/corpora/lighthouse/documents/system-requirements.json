@@ -1,0 +1,31 @@
+{
+  "doc_id": "system-requirements",
+  "title": "System Requirements",
+  "doc_type": "table",
+  "chunks": [
+    {
+      "chunk_id": "system-requirements::c0",
+      "position": 0,
+      "doc_chunk_count": 3,
+      "heading": "Desktop app requirements",
+      "source_type": "table",
+      "text": "| OS | Minimum version | RAM |\n|---|---|---|\n| Windows | 10 | 4 GB |\n| macOS | 12 | 4 GB |\n| Ubuntu | 20.04 | 4 GB |"
+    },
+    {
+      "chunk_id": "system-requirements::c1",
+      "position": 1,
+      "doc_chunk_count": 3,
+      "heading": "Mobile app requirements",
+      "source_type": "table",
+      "text": "| Platform | Minimum version |\n|---|---|\n| iOS | 15 |\n| Android | 10 |"
+    },
+    {
+      "chunk_id": "system-requirements::c2",
+      "position": 2,
+      "doc_chunk_count": 3,
+      "heading": "Browser support table",
+      "source_type": "table",
+      "text": "| Browser | Minimum version |\n|---|---|\n| Chrome | 100 |\n| Firefox | 100 |\n| Safari | 15 |\n| Edge | 100 |"
+    }
+  ]
+}

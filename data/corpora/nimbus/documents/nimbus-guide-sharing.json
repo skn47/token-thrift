@@ -1,0 +1,47 @@
+{
+  "doc_id": "nimbus-guide-sharing",
+  "title": "Household Roles and Sharing",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-guide-sharing::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Role overview",
+      "source_type": "prose",
+      "text": "Nimbus has four household roles: Owner, Admin, Member, and Guest. Roles are assigned per household and control what a person can see and control."
+    },
+    {
+      "chunk_id": "nimbus-guide-sharing::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Owner permissions",
+      "source_type": "prose",
+      "text": "The Owner is the only role that can change billing details or permanently delete the household. Ownership can be transferred to an Admin from Household Settings."
+    },
+    {
+      "chunk_id": "nimbus-guide-sharing::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "Admin permissions",
+      "source_type": "prose",
+      "text": "Admins can invite or remove household members, add or remove devices, and edit any automation. Admins cannot change billing or delete the household."
+    },
+    {
+      "chunk_id": "nimbus-guide-sharing::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "Member permissions",
+      "source_type": "prose",
+      "text": "Members can control any device in the household and create their own automations. Members cannot invite new people or change another member's role."
+    },
+    {
+      "chunk_id": "nimbus-guide-sharing::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Guest permissions",
+      "source_type": "prose",
+      "text": "Guests get temporary, time-limited control of only the devices an Admin explicitly shares with them, such as a front door lock for a house sitter. A Guest cannot view cameras unless a camera is explicitly shared."
+    }
+  ]
+}

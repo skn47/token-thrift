@@ -1,0 +1,31 @@
+{
+  "doc_id": "nimbus-pricing-table",
+  "title": "Pricing and Plans",
+  "doc_type": "table",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-pricing-table::c0",
+      "position": 0,
+      "doc_chunk_count": 3,
+      "heading": "Plan comparison table",
+      "source_type": "table",
+      "text": "| | Free | Plus | Pro |\n|---|---|---|---|\n| Price per month | $0 | $6 | Custom |\n| Max devices | 10 | 50 | Unlimited |\n| Cloud recording | No | 7 days | 30 days |\n| Geofencing | No | Yes | Yes |\n| API access | No | No | Yes |"
+    },
+    {
+      "chunk_id": "nimbus-pricing-table::c1",
+      "position": 1,
+      "doc_chunk_count": 3,
+      "heading": "Storage limits table",
+      "source_type": "table",
+      "text": "| Plan | Video storage |\n|---|---|\n| Free | None |\n| Plus | 10 GB |\n| Pro | 200 GB |"
+    },
+    {
+      "chunk_id": "nimbus-pricing-table::c2",
+      "position": 2,
+      "doc_chunk_count": 3,
+      "heading": "API rate limits table",
+      "source_type": "table",
+      "text": "| Plan | Requests per minute |\n|---|---|\n| Free | 0 |\n| Plus | 0 |\n| Pro | 300 |"
+    }
+  ]
+}

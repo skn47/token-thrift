@@ -1,0 +1,36 @@
+{
+  "pricing_version": "2026-08-22",
+  "providers": {
+    "groq": {
+      "source": "https://www.cloudzero.com/blog/groq-pricing/",
+      "models": {
+        "openai/gpt-oss-20b": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.30
+        },
+        "openai/gpt-oss-120b": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.60
+        }
+      }
+    },
+    "openai": {
+      "source": "https://openai.com/api/pricing/",
+      "models": {
+        "gpt-4o-mini": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.60
+        }
+      }
+    },
+    "anthropic": {
+      "source": "https://www.anthropic.com/pricing",
+      "models": {
+        "claude-sonnet-5": {
+          "input_per_million": 3.00,
+          "output_per_million": 15.00
+        }
+      }
+    }
+  }
+}

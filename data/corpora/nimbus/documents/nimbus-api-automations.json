@@ -1,0 +1,39 @@
+{
+  "doc_id": "nimbus-api-automations",
+  "title": "Automations API Reference",
+  "doc_type": "code",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-api-automations::c0",
+      "position": 0,
+      "doc_chunk_count": 4,
+      "heading": "Overview",
+      "source_type": "prose",
+      "text": "Automations created in the app are also manageable through the API. Supported trigger types include device_state, time_of_day, and geofence."
+    },
+    {
+      "chunk_id": "nimbus-api-automations::c1",
+      "position": 1,
+      "doc_chunk_count": 4,
+      "heading": "POST /v1/automations",
+      "source_type": "code",
+      "text": "curl -X POST https://api.nimbus.example/v1/automations \\\n  -d name=\"Porch light at dusk\" \\\n  -d trigger_type=time_of_day -d trigger_value=sunset"
+    },
+    {
+      "chunk_id": "nimbus-api-automations::c2",
+      "position": 2,
+      "doc_chunk_count": 4,
+      "heading": "Listing automations",
+      "source_type": "code",
+      "text": "curl https://api.nimbus.example/v1/automations \\\n  -H \"Authorization: Bearer $ACCESS_TOKEN\"\n# returns every automation for the authenticated household"
+    },
+    {
+      "chunk_id": "nimbus-api-automations::c3",
+      "position": 3,
+      "doc_chunk_count": 4,
+      "heading": "Deleting an automation",
+      "source_type": "code",
+      "text": "curl -X DELETE https://api.nimbus.example/v1/automations/aut_55b2\n# any routine referencing a deleted device is disabled, not deleted, per the automation limits guide"
+    }
+  ]
+}

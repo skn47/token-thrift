@@ -1,0 +1,39 @@
+{
+  "doc_id": "nimbus-api-devices",
+  "title": "Devices API Reference",
+  "doc_type": "code",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-api-devices::c0",
+      "position": 0,
+      "doc_chunk_count": 4,
+      "heading": "Overview",
+      "source_type": "prose",
+      "text": "The devices resource represents a single paired device. Every device belongs to exactly one household and has a type, room assignment, and current state."
+    },
+    {
+      "chunk_id": "nimbus-api-devices::c1",
+      "position": 1,
+      "doc_chunk_count": 4,
+      "heading": "GET /v1/devices/{device_id}",
+      "source_type": "code",
+      "text": "{\n  \"id\": \"dev_7f2a\",\n  \"type\": \"smart_lock\",\n  \"room_id\": \"rm_1c88\",\n  \"state\": \"locked\",\n  \"battery_pct\": 82\n}"
+    },
+    {
+      "chunk_id": "nimbus-api-devices::c2",
+      "position": 2,
+      "doc_chunk_count": 4,
+      "heading": "PATCH /v1/devices/{device_id}",
+      "source_type": "code",
+      "text": "curl -X PATCH https://api.nimbus.example/v1/devices/dev_7f2a \\\n  -d state=unlocked\n# any subset of settable device fields may be included"
+    },
+    {
+      "chunk_id": "nimbus-api-devices::c3",
+      "position": 3,
+      "doc_chunk_count": 4,
+      "heading": "Rate limiting headers",
+      "source_type": "code",
+      "text": "Every API response includes:\nX-RateLimit-Limit: 300\nX-RateLimit-Remaining: 271\nX-RateLimit-Reset: 1735689600"
+    }
+  ]
+}

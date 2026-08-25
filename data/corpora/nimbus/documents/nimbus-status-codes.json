@@ -1,0 +1,31 @@
+{
+  "doc_id": "nimbus-status-codes",
+  "title": "HTTP Status Code Reference",
+  "doc_type": "table",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-status-codes::c0",
+      "position": 0,
+      "doc_chunk_count": 3,
+      "heading": "Success codes table",
+      "source_type": "table",
+      "text": "| Code | Meaning |\n|---|---|\n| 200 | Request succeeded |\n| 201 | Resource created |\n| 204 | Succeeded with no response body, e.g. after a delete |"
+    },
+    {
+      "chunk_id": "nimbus-status-codes::c1",
+      "position": 1,
+      "doc_chunk_count": 3,
+      "heading": "Client error codes table",
+      "source_type": "table",
+      "text": "| Code | Meaning |\n|---|---|\n| 400 | Malformed request |\n| 401 | Missing or invalid credentials |\n| 403 | Authenticated but not permitted |\n| 404 | Resource not found |\n| 429 | Too many requests, rate limited |"
+    },
+    {
+      "chunk_id": "nimbus-status-codes::c2",
+      "position": 2,
+      "doc_chunk_count": 3,
+      "heading": "Server error codes table",
+      "source_type": "table",
+      "text": "| Code | Meaning |\n|---|---|\n| 500 | Unexpected server error |\n| 503 | Service temporarily unavailable |"
+    }
+  ]
+}

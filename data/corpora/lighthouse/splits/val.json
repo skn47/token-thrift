@@ -1,0 +1,20 @@
+{
+  "doc_ids": [
+    "api-webhooks",
+    "guide-integrations",
+    "guide-security",
+    "pricing-table"
+  ],
+  "question_ids": [
+    "q09",
+    "q10",
+    "q11",
+    "q12",
+    "q18",
+    "q19",
+    "q20",
+    "q23",
+    "q24",
+    "q25"
+  ]
+}

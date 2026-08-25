@@ -1,0 +1,47 @@
+{
+  "doc_id": "api-tasks",
+  "title": "Tasks API Reference",
+  "doc_type": "code",
+  "chunks": [
+    {
+      "chunk_id": "api-tasks::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Overview",
+      "source_type": "prose",
+      "text": "The tasks resource represents a single card on a project board. Every task belongs to exactly one project and has a status, priority, and optional assignee."
+    },
+    {
+      "chunk_id": "api-tasks::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "GET /v1/tasks/{task_id}",
+      "source_type": "code",
+      "text": "{\n  \"id\": \"tsk_9f2a\",\n  \"title\": \"Write release notes\",\n  \"status\": \"in_progress\",\n  \"assignee_id\": \"usr_1c88\",\n  \"due_date\": \"2026-09-01\"\n}"
+    },
+    {
+      "chunk_id": "api-tasks::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "POST /v1/tasks",
+      "source_type": "code",
+      "text": "curl -X POST https://api.lighthouse.example/v1/tasks \\\n  -d project_id=prj_44a1 -d title=\"Ship the release\" \\\n  -d assignee_id=usr_1c88"
+    },
+    {
+      "chunk_id": "api-tasks::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "PATCH /v1/tasks/{task_id}",
+      "source_type": "code",
+      "text": "curl -X PATCH https://api.lighthouse.example/v1/tasks/tsk_9f2a \\\n  -d status=done\n# any subset of task fields may be included in the body"
+    },
+    {
+      "chunk_id": "api-tasks::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Rate limiting headers",
+      "source_type": "code",
+      "text": "Every API response includes:\nX-RateLimit-Limit: 600\nX-RateLimit-Remaining: 542\nX-RateLimit-Reset: 1735689600"
+    }
+  ]
+}

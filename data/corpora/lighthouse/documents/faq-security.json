@@ -1,0 +1,39 @@
+{
+  "doc_id": "faq-security",
+  "title": "Security FAQ",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "faq-security::c0",
+      "position": 0,
+      "doc_chunk_count": 4,
+      "heading": "Is two-factor authentication mandatory?",
+      "source_type": "prose",
+      "text": "Two-factor authentication is optional per user by default, unless a workspace Admin turns on org-wide enforcement in the security settings."
+    },
+    {
+      "chunk_id": "faq-security::c1",
+      "position": 1,
+      "doc_chunk_count": 4,
+      "heading": "Where is customer data hosted?",
+      "source_type": "prose",
+      "text": "Customer data is hosted on AWS in the us-east-1 region by default. EU data residency is available as an add-on for Enterprise plans."
+    },
+    {
+      "chunk_id": "faq-security::c2",
+      "position": 2,
+      "doc_chunk_count": 4,
+      "heading": "Do you have a bug bounty program?",
+      "source_type": "prose",
+      "text": "Yes, Lighthouse runs a bug bounty program hosted on HackerOne. Its scope covers app.lighthouse.example only."
+    },
+    {
+      "chunk_id": "faq-security::c3",
+      "position": 3,
+      "doc_chunk_count": 4,
+      "heading": "How do I report a security vulnerability?",
+      "source_type": "prose",
+      "text": "Email security@lighthouse.example. A PGP key for encrypting sensitive reports is published on the security page."
+    }
+  ]
+}

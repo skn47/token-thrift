@@ -1,0 +1,47 @@
+{
+  "doc_id": "guide-getting-started",
+  "title": "Getting Started with Lighthouse",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "guide-getting-started::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Creating your workspace",
+      "source_type": "prose",
+      "text": "When you sign up for Lighthouse, you create a workspace first. From the workspace settings you can invite teammates by email; each invited teammate receives a link to join and choose a password. There is no limit on the number of pending invites you can send at once."
+    },
+    {
+      "chunk_id": "guide-getting-started::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Creating your first project",
+      "source_type": "prose",
+      "text": "Inside a workspace, click New Project to create a board. Every new project starts with three default columns: To Do, In Progress, and Done. You can rename or add columns later from the board settings menu."
+    },
+    {
+      "chunk_id": "guide-getting-started::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "Adding tasks",
+      "source_type": "prose",
+      "text": "To add a task, click the plus icon at the bottom of a column. Each task can be assigned to a teammate and given a due date. Tasks without an assignee show up in the Unassigned filter so nothing falls through the cracks."
+    },
+    {
+      "chunk_id": "guide-getting-started::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "Notifications",
+      "source_type": "prose",
+      "text": "Lighthouse sends notifications both by email and inside the app. You can turn off email notifications entirely from Settings > Notifications while keeping in-app alerts on, or the reverse."
+    },
+    {
+      "chunk_id": "guide-getting-started::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Mobile app",
+      "source_type": "prose",
+      "text": "Lighthouse has a native mobile app available for iPhone and Android. The mobile app supports viewing and editing tasks, and push notifications for assignments and mentions."
+    }
+  ]
+}

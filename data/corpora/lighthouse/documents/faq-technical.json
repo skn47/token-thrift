@@ -1,0 +1,47 @@
+{
+  "doc_id": "faq-technical",
+  "title": "Technical FAQ",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "faq-technical::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Does Lighthouse support offline mode?",
+      "source_type": "prose",
+      "text": "Offline read access is available only in the mobile apps. The desktop and web apps require an active connection to load or save changes."
+    },
+    {
+      "chunk_id": "faq-technical::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Why am I hitting rate limit errors?",
+      "source_type": "prose",
+      "text": "You are exceeding your plan's allowed API requests per minute; see the API rate limits table in the pricing documentation for your plan's exact limit."
+    },
+    {
+      "chunk_id": "faq-technical::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "How long are webhook retries attempted?",
+      "source_type": "prose",
+      "text": "A failing webhook endpoint is retried for up to 24 hours using exponential backoff before Lighthouse stops trying."
+    },
+    {
+      "chunk_id": "faq-technical::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "Can I export all of my data?",
+      "source_type": "prose",
+      "text": "Yes, from Settings > Data Export you can download a CSV export containing your tasks, projects, and comments."
+    },
+    {
+      "chunk_id": "faq-technical::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Is there a public status page?",
+      "source_type": "prose",
+      "text": "status.lighthouse.example shows current uptime and a history of past incidents."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "doc_id": "api-auth",
+  "title": "Authentication API Reference",
+  "doc_type": "code",
+  "chunks": [
+    {
+      "chunk_id": "api-auth::c0",
+      "position": 0,
+      "doc_chunk_count": 4,
+      "heading": "Overview",
+      "source_type": "prose",
+      "text": "The Lighthouse API supports two authentication methods: short-lived OAuth access tokens for user-facing apps, and long-lived API keys for server-to-server integrations."
+    },
+    {
+      "chunk_id": "api-auth::c1",
+      "position": 1,
+      "doc_chunk_count": 4,
+      "heading": "POST /v1/auth/token",
+      "source_type": "code",
+      "text": "curl -X POST https://api.lighthouse.example/v1/auth/token \\\n  -d client_id=CID -d client_secret=SECRET \\\n  -d grant_type=client_credentials\n# response:\n{\"access_token\": \"ltk_...\", \"expires_in\": 3600, \"token_type\": \"bearer\"}"
+    },
+    {
+      "chunk_id": "api-auth::c2",
+      "position": 2,
+      "doc_chunk_count": 4,
+      "heading": "Refreshing tokens",
+      "source_type": "code",
+      "text": "curl -X POST https://api.lighthouse.example/v1/auth/token \\\n  -d grant_type=refresh_token \\\n  -d refresh_token=$REFRESH_TOKEN\n# returns a new access_token without requiring the user to log in again"
+    },
+    {
+      "chunk_id": "api-auth::c3",
+      "position": 3,
+      "doc_chunk_count": 4,
+      "heading": "Revoking a token",
+      "source_type": "code",
+      "text": "curl -X DELETE https://api.lighthouse.example/v1/auth/token/{token_id} \\\n  -H \"Authorization: Bearer $ACCESS_TOKEN\"\n# returns 204 No Content on success"
+    }
+  ]
+}

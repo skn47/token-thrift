@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
+
+# Trained artifacts (regenerable, versioned separately from source)
+artifacts/
+.pytest_cache/
+.coverage
+htmlcov/
+

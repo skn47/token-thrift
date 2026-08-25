@@ -1,0 +1,31 @@
+{
+  "doc_id": "pricing-table",
+  "title": "Pricing and Plans",
+  "doc_type": "table",
+  "chunks": [
+    {
+      "chunk_id": "pricing-table::c0",
+      "position": 0,
+      "doc_chunk_count": 3,
+      "heading": "Plan comparison table",
+      "source_type": "table",
+      "text": "| | Free | Team | Enterprise |\n|---|---|---|---|\n| Price per seat | $0 | $9/mo | Custom |\n| Max projects | 3 | Unlimited | Unlimited |\n| Integrations | Slack only | All | All |\n| Single sign-on | No | No | Yes |\n| Audit logs | No | No | Yes |"
+    },
+    {
+      "chunk_id": "pricing-table::c1",
+      "position": 1,
+      "doc_chunk_count": 3,
+      "heading": "Storage limits table",
+      "source_type": "table",
+      "text": "| Plan | Storage |\n|---|---|\n| Free | 1 GB |\n| Team | 50 GB |\n| Enterprise | Unlimited |"
+    },
+    {
+      "chunk_id": "pricing-table::c2",
+      "position": 2,
+      "doc_chunk_count": 3,
+      "heading": "API rate limits table",
+      "source_type": "table",
+      "text": "| Plan | Requests per minute |\n|---|---|\n| Free | 60 |\n| Team | 600 |\n| Enterprise | 6000 |"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "doc_id": "guide-integrations",
+  "title": "Connecting Third-Party Integrations",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "guide-integrations::c0",
+      "position": 0,
+      "doc_chunk_count": 4,
+      "heading": "Slack integration",
+      "source_type": "prose",
+      "text": "Connect Lighthouse to Slack from Settings > Integrations to post task updates directly into a chosen channel whenever a task changes status."
+    },
+    {
+      "chunk_id": "guide-integrations::c1",
+      "position": 1,
+      "doc_chunk_count": 4,
+      "heading": "GitHub integration",
+      "source_type": "prose",
+      "text": "Linking a GitHub repository lets you reference a task from a commit message or pull request title using its task ID; merging the linked pull request automatically marks the task done."
+    },
+    {
+      "chunk_id": "guide-integrations::c2",
+      "position": 2,
+      "doc_chunk_count": 4,
+      "heading": "Google Calendar integration",
+      "source_type": "prose",
+      "text": "Enabling the Google Calendar integration syncs every task with a due date into a dedicated Lighthouse calendar that updates automatically as dates change."
+    },
+    {
+      "chunk_id": "guide-integrations::c3",
+      "position": 3,
+      "doc_chunk_count": 4,
+      "heading": "Zapier integration",
+      "source_type": "prose",
+      "text": "Lighthouse connects to more than five thousand other applications through Zapier, letting you build custom automations without writing any code."
+    }
+  ]
+}

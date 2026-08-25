@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>TokenThrift pipeline: retrieval, feature extraction, ML pruning, safety rules, generation, and session feedback</title>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6c5ce7"/>
+    </marker>
+    <marker id="arrow-feedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a7fd6"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="500" rx="20" fill="#fafaff"/>
+
+  <!-- Row 1 -->
+  <g>
+    <rect x="20" y="60" width="250" height="90" rx="12" fill="#ffffff" stroke="#6c5ce7" stroke-width="2"/>
+    <text x="145" y="98" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">User Query</text>
+    <text x="145" y="120" text-anchor="middle" font-size="12" fill="#666">the question to answer</text>
+  </g>
+  <g>
+    <rect x="310" y="60" width="250" height="90" rx="12" fill="#ffffff" stroke="#6c5ce7" stroke-width="2"/>
+    <text x="435" y="98" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">Retrieval</text>
+    <text x="435" y="120" text-anchor="middle" font-size="12" fill="#666">TF-IDF / cosine, broad recall</text>
+  </g>
+  <g>
+    <rect x="600" y="60" width="250" height="90" rx="12" fill="#ffffff" stroke="#6c5ce7" stroke-width="2"/>
+    <text x="725" y="98" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">Feature Extraction</text>
+    <text x="725" y="120" text-anchor="middle" font-size="12" fill="#666">10 query/chunk/structural signals</text>
+  </g>
+  <g>
+    <rect x="890" y="60" width="250" height="90" rx="12" fill="#ffffff" stroke="#6c5ce7" stroke-width="2.5"/>
+    <text x="1015" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">Logistic-Regression</text>
+    <text x="1015" y="110" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">Pruner</text>
+    <text x="1015" y="130" text-anchor="middle" font-size="12" fill="#666">relevance probability per chunk</text>
+  </g>
+
+  <!-- Row 1 arrows -->
+  <line x1="270" y1="105" x2="306" y2="105" stroke="#6c5ce7" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="560" y1="105" x2="596" y2="105" stroke="#6c5ce7" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="850" y1="105" x2="886" y2="105" stroke="#6c5ce7" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Connector row1 -> row2 -->
+  <line x1="1015" y1="150" x2="1015" y2="236" stroke="#6c5ce7" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 2 -->
+  <g>
+    <rect x="890" y="240" width="250" height="90" rx="12" fill="#ffffff" stroke="#1e8e5a" stroke-width="2.5"/>
+    <text x="1015" y="272" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">Deterministic</text>
+    <text x="1015" y="290" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">Safety Rules</text>
+    <text x="1015" y="310" text-anchor="middle" font-size="12" fill="#666">min context · neighbors · budget</text>
+  </g>
+  <g>
+    <rect x="600" y="240" width="250" height="90" rx="12" fill="#ffffff" stroke="#6c5ce7" stroke-width="2"/>
+    <text x="725" y="278" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">Pruned Prompt</text>
+    <text x="725" y="300" text-anchor="middle" font-size="12" fill="#666">token-budget enforced</text>
+  </g>
+  <g>
+    <rect x="310" y="240" width="250" height="90" rx="12" fill="#ffffff" stroke="#6c5ce7" stroke-width="2"/>
+    <text x="435" y="278" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">BYOK Generation</text>
+    <text x="435" y="300" text-anchor="middle" font-size="12" fill="#666">Groq / OpenAI / Anthropic / custom</text>
+  </g>
+  <g>
+    <rect x="20" y="240" width="250" height="90" rx="12" fill="#ffffff" stroke="#6c5ce7" stroke-width="2"/>
+    <text x="145" y="278" text-anchor="middle" font-size="17" font-weight="700" fill="#1a1a2e">Answer</text>
+    <text x="145" y="300" text-anchor="middle" font-size="12" fill="#666">grounding checks + user feedback</text>
+  </g>
+
+  <!-- Row 2 arrows (leftward) -->
+  <line x1="890" y1="285" x2="854" y2="285" stroke="#6c5ce7" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="600" y1="285" x2="564" y2="285" stroke="#6c5ce7" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="310" y1="285" x2="274" y2="285" stroke="#6c5ce7" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Session Policy Adapter -->
+  <rect x="350" y="400" width="500" height="70" rx="12" fill="#f3f1ff" stroke="#8a7fd6" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="600" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">Session Policy Adapter</text>
+  <text x="600" y="450" text-anchor="middle" font-size="12" fill="#555">bounded calibration · guarded session-local online learning</text>
+
+  <!-- Feedback loop: Answer -> Adapter -> back into the Pruner -->
+  <path d="M145,330 L145,368 L400,368 L400,396" fill="none" stroke="#8a7fd6" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-feedback)"/>
+  <path d="M850,420 L1170,420 L1170,105 L1144,105" fill="none" stroke="#8a7fd6" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-feedback)"/>
+  <text x="245" y="360" text-anchor="middle" font-size="11" fill="#8a7fd6">feedback</text>
+  <text x="1178" y="260" font-size="11" fill="#8a7fd6" transform="rotate(90 1178 260)" text-anchor="middle">adjusts threshold / retrains session model</text>
+</svg>

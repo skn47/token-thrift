@@ -1,0 +1,47 @@
+{
+  "doc_id": "guide-permissions",
+  "title": "Permissions and Roles Guide",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "guide-permissions::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Role overview",
+      "source_type": "prose",
+      "text": "Lighthouse has four roles: Owner, Admin, Member, and Guest. Roles are assigned per workspace and control what a person can see and change."
+    },
+    {
+      "chunk_id": "guide-permissions::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Owner permissions",
+      "source_type": "prose",
+      "text": "The Owner is the only role that can change billing details or permanently delete the entire workspace. Ownership can be transferred to an Admin from the workspace settings."
+    },
+    {
+      "chunk_id": "guide-permissions::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "Admin permissions",
+      "source_type": "prose",
+      "text": "Admins can manage workspace members, create and archive projects, and connect or disconnect integrations. Admins cannot change billing or delete the workspace."
+    },
+    {
+      "chunk_id": "guide-permissions::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "Member permissions",
+      "source_type": "prose",
+      "text": "Members can create and edit tasks in any project they have been added to. Members cannot invite new people to the workspace or change another member's role."
+    },
+    {
+      "chunk_id": "guide-permissions::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Guest permissions",
+      "source_type": "prose",
+      "text": "Guests have view-only access to the specific projects they were invited to. A Guest cannot invite other people, cannot edit tasks, and cannot see any project they were not explicitly added to."
+    }
+  ]
+}

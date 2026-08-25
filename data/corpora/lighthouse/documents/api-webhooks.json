@@ -1,0 +1,39 @@
+{
+  "doc_id": "api-webhooks",
+  "title": "Webhooks API Reference",
+  "doc_type": "code",
+  "chunks": [
+    {
+      "chunk_id": "api-webhooks::c0",
+      "position": 0,
+      "doc_chunk_count": 4,
+      "heading": "Overview",
+      "source_type": "prose",
+      "text": "Webhooks notify your server when events happen in Lighthouse. Supported event types include task.created, task.completed, and project.archived."
+    },
+    {
+      "chunk_id": "api-webhooks::c1",
+      "position": 1,
+      "doc_chunk_count": 4,
+      "heading": "Registering a webhook",
+      "source_type": "code",
+      "text": "curl -X POST https://api.lighthouse.example/v1/webhooks \\\n  -d target_url=https://yourapp.example/hooks \\\n  -d event_types=task.completed,project.archived"
+    },
+    {
+      "chunk_id": "api-webhooks::c2",
+      "position": 2,
+      "doc_chunk_count": 4,
+      "heading": "Verifying webhook signatures",
+      "source_type": "code",
+      "text": "# Lighthouse signs each payload in the X-Lighthouse-Signature header\nexpected = hmac_sha256(webhook_secret, request_body)\nif not constant_time_equal(expected, header_value):\n    reject_request()"
+    },
+    {
+      "chunk_id": "api-webhooks::c3",
+      "position": 3,
+      "doc_chunk_count": 4,
+      "heading": "Retry behavior",
+      "source_type": "code",
+      "text": "If your endpoint does not return a 2xx response, Lighthouse retries delivery up to five times using exponential backoff, giving up after 24 hours of failed attempts."
+    }
+  ]
+}

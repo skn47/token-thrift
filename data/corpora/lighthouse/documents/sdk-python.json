@@ -1,0 +1,47 @@
+{
+  "doc_id": "sdk-python",
+  "title": "Python SDK Quickstart",
+  "doc_type": "code",
+  "chunks": [
+    {
+      "chunk_id": "sdk-python::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Installation",
+      "source_type": "code",
+      "text": "pip install lighthouse-sdk"
+    },
+    {
+      "chunk_id": "sdk-python::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Client initialization",
+      "source_type": "code",
+      "text": "from lighthouse import Lighthouse\nclient = Lighthouse(api_key=\"ltk_...\")"
+    },
+    {
+      "chunk_id": "sdk-python::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "Creating a task",
+      "source_type": "code",
+      "text": "client.tasks.create(\n    project_id=\"prj_44a1\",\n    title=\"Ship the release\",\n    assignee_id=\"usr_1c88\",\n)"
+    },
+    {
+      "chunk_id": "sdk-python::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "Listing tasks with a filter",
+      "source_type": "code",
+      "text": "open_tasks = client.tasks.list(\n    status=\"open\",\n    assignee_id=\"usr_1c88\",\n)"
+    },
+    {
+      "chunk_id": "sdk-python::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Error handling",
+      "source_type": "code",
+      "text": "from lighthouse import LighthouseAPIError\ntry:\n    client.tasks.create(project_id=\"bad_id\", title=\"x\")\nexcept LighthouseAPIError as e:\n    print(e.status_code, e.message)"
+    }
+  ]
+}

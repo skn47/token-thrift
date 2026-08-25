@@ -1,0 +1,51 @@
+{"question_id": "q01", "question_text": "How do I invite teammates to my workspace?", "doc_id": "guide-getting-started", "chunk_id": "guide-getting-started::c0", "relevant": true}
+{"question_id": "q02", "question_text": "How do I create a new project board?", "doc_id": "guide-getting-started", "chunk_id": "guide-getting-started::c1", "relevant": true}
+{"question_id": "q03", "question_text": "How do I assign a due date to a task?", "doc_id": "guide-getting-started", "chunk_id": "guide-getting-started::c2", "relevant": true}
+{"question_id": "q04", "question_text": "Can I turn off email notifications?", "doc_id": "guide-getting-started", "chunk_id": "guide-getting-started::c3", "relevant": true}
+{"question_id": "q05", "question_text": "Is there a Lighthouse mobile app for iPhone?", "doc_id": "guide-getting-started", "chunk_id": "guide-getting-started::c4", "relevant": true}
+{"question_id": "q06", "question_text": "What can a Guest user see in Lighthouse?", "doc_id": "guide-permissions", "chunk_id": "guide-permissions::c4", "relevant": true}
+{"question_id": "q07", "question_text": "What permissions does an Admin have?", "doc_id": "guide-permissions", "chunk_id": "guide-permissions::c2", "relevant": true}
+{"question_id": "q08", "question_text": "Who can delete the entire workspace?", "doc_id": "guide-permissions", "chunk_id": "guide-permissions::c1", "relevant": true}
+{"question_id": "q09", "question_text": "How do I connect Lighthouse to Slack?", "doc_id": "guide-integrations", "chunk_id": "guide-integrations::c0", "relevant": true}
+{"question_id": "q10", "question_text": "Does Lighthouse integrate with GitHub pull requests?", "doc_id": "guide-integrations", "chunk_id": "guide-integrations::c1", "relevant": true}
+{"question_id": "q11", "question_text": "Is customer data encrypted at rest?", "doc_id": "guide-security", "chunk_id": "guide-security::c0", "relevant": true}
+{"question_id": "q12", "question_text": "Does Lighthouse support single sign-on?", "doc_id": "guide-security", "chunk_id": "guide-security::c1", "relevant": true}
+{"question_id": "q13", "question_text": "What fields are returned when I fetch a single task by ID?", "doc_id": "api-tasks", "chunk_id": "api-tasks::c1", "relevant": true}
+{"question_id": "q14", "question_text": "How do I mark a task as done via the API?", "doc_id": "api-tasks", "chunk_id": "api-tasks::c3", "relevant": true}
+{"question_id": "q15", "question_text": "What response headers tell me how many API requests I have left?", "doc_id": "api-tasks", "chunk_id": "api-tasks::c4", "relevant": true}
+{"question_id": "q16", "question_text": "How do I get an access token to call the API?", "doc_id": "api-auth", "chunk_id": "api-auth::c1", "relevant": true}
+{"question_id": "q17", "question_text": "How can I refresh an expired access token without logging in again?", "doc_id": "api-auth", "chunk_id": "api-auth::c2", "relevant": true}
+{"question_id": "q18", "question_text": "How do I verify that a webhook request really came from Lighthouse?", "doc_id": "api-webhooks", "chunk_id": "api-webhooks::c2", "relevant": true}
+{"question_id": "q19", "question_text": "What events can trigger a webhook?", "doc_id": "api-webhooks", "chunk_id": "api-webhooks::c0", "relevant": true}
+{"question_id": "q20", "question_text": "How many times will Lighthouse retry a failing webhook delivery?", "doc_id": "api-webhooks", "chunk_id": "api-webhooks::c3", "relevant": true}
+{"question_id": "q21", "question_text": "How do I install the Python SDK?", "doc_id": "sdk-python", "chunk_id": "sdk-python::c0", "relevant": true}
+{"question_id": "q22", "question_text": "How do I create a task using the Python SDK?", "doc_id": "sdk-python", "chunk_id": "sdk-python::c2", "relevant": true}
+{"question_id": "q23", "question_text": "How much storage does the Team plan include?", "doc_id": "pricing-table", "chunk_id": "pricing-table::c1", "relevant": true}
+{"question_id": "q24", "question_text": "Does the Free plan include single sign-on?", "doc_id": "pricing-table", "chunk_id": "pricing-table::c0", "relevant": true}
+{"question_id": "q25", "question_text": "What API rate limit applies to the Enterprise plan?", "doc_id": "pricing-table", "chunk_id": "pricing-table::c2", "relevant": true}
+{"question_id": "q26", "question_text": "What operating systems can run the Lighthouse desktop app?", "doc_id": "system-requirements", "chunk_id": "system-requirements::c0", "relevant": true}
+{"question_id": "q27", "question_text": "What does a 429 status code mean?", "doc_id": "status-codes", "chunk_id": "status-codes::c1", "relevant": true}
+{"question_id": "q28", "question_text": "What does a 204 response mean when I delete a task?", "doc_id": "status-codes", "chunk_id": "status-codes::c0", "relevant": true}
+{"question_id": "q29", "question_text": "What custom field types can I add to a project?", "doc_id": "field-reference", "chunk_id": "field-reference::c1", "relevant": true}
+{"question_id": "q30", "question_text": "Can I change my Lighthouse plan in the middle of a billing cycle?", "doc_id": "faq-billing", "chunk_id": "faq-billing::c0", "relevant": true}
+{"question_id": "q31", "question_text": "What payment methods does Lighthouse accept for annual Enterprise billing?", "doc_id": "faq-billing", "chunk_id": "faq-billing::c1", "relevant": true}
+{"question_id": "q32", "question_text": "Where can I download a copy of my invoice?", "doc_id": "faq-billing", "chunk_id": "faq-billing::c2", "relevant": true}
+{"question_id": "q33", "question_text": "If my payment fails and my workspace gets downgraded to Free, will I lose my project data?", "doc_id": "faq-billing", "chunk_id": "faq-billing::c3", "relevant": true}
+{"question_id": "q33", "question_text": "If my payment fails and my workspace gets downgraded to Free, will I lose my project data?", "doc_id": "faq-billing", "chunk_id": "faq-billing::c4", "relevant": true}
+{"question_id": "q34", "question_text": "Can I get my money back after being charged?", "doc_id": "faq-billing", "chunk_id": "faq-billing::c5", "relevant": true}
+{"question_id": "q35", "question_text": "How do I reset a forgotten password?", "doc_id": "faq-account", "chunk_id": "faq-account::c0", "relevant": true}
+{"question_id": "q36", "question_text": "Can two separate Lighthouse accounts be merged into one?", "doc_id": "faq-account", "chunk_id": "faq-account::c1", "relevant": true}
+{"question_id": "q37", "question_text": "After I transfer workspace ownership to someone else, what role do I end up with?", "doc_id": "faq-account", "chunk_id": "faq-account::c2", "relevant": true}
+{"question_id": "q37", "question_text": "After I transfer workspace ownership to someone else, what role do I end up with?", "doc_id": "faq-account", "chunk_id": "faq-account::c3", "relevant": true}
+{"question_id": "q38", "question_text": "Can an Admin promote a Guest to a full Member?", "doc_id": "faq-account", "chunk_id": "faq-account::c4", "relevant": true}
+{"question_id": "q39", "question_text": "Does the Lighthouse desktop app work without an internet connection?", "doc_id": "faq-technical", "chunk_id": "faq-technical::c0", "relevant": true}
+{"question_id": "q40", "question_text": "Why do I keep getting rate limited when calling the API?", "doc_id": "faq-technical", "chunk_id": "faq-technical::c1", "relevant": true}
+{"question_id": "q41", "question_text": "For how long does Lighthouse keep retrying a webhook delivery that keeps failing?", "doc_id": "faq-technical", "chunk_id": "faq-technical::c2", "relevant": true}
+{"question_id": "q41", "question_text": "For how long does Lighthouse keep retrying a webhook delivery that keeps failing?", "doc_id": "api-webhooks", "chunk_id": "api-webhooks::c3", "relevant": true}
+{"question_id": "q42", "question_text": "How do I export all of my Lighthouse data?", "doc_id": "faq-technical", "chunk_id": "faq-technical::c3", "relevant": true}
+{"question_id": "q43", "question_text": "Is there a status page I can check during an outage?", "doc_id": "faq-technical", "chunk_id": "faq-technical::c4", "relevant": true}
+{"question_id": "q44", "question_text": "Is two-factor authentication required for everyone on my team?", "doc_id": "faq-security", "chunk_id": "faq-security::c0", "relevant": true}
+{"question_id": "q44", "question_text": "Is two-factor authentication required for everyone on my team?", "doc_id": "guide-security", "chunk_id": "guide-security::c2", "relevant": true}
+{"question_id": "q45", "question_text": "Where does Lighthouse host customer data by default?", "doc_id": "faq-security", "chunk_id": "faq-security::c1", "relevant": true}
+{"question_id": "q46", "question_text": "How do I take part in Lighthouse's bug bounty and report a vulnerability I found?", "doc_id": "faq-security", "chunk_id": "faq-security::c2", "relevant": true}
+{"question_id": "q46", "question_text": "How do I take part in Lighthouse's bug bounty and report a vulnerability I found?", "doc_id": "faq-security", "chunk_id": "faq-security::c3", "relevant": true}

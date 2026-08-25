@@ -1,0 +1,47 @@
+{
+  "doc_id": "nimbus-sdk-python",
+  "title": "Python SDK Quickstart",
+  "doc_type": "code",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-sdk-python::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Installation",
+      "source_type": "code",
+      "text": "pip install nimbus-sdk"
+    },
+    {
+      "chunk_id": "nimbus-sdk-python::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Client initialization",
+      "source_type": "code",
+      "text": "from nimbus import Nimbus\nclient = Nimbus(api_key=\"nbs_...\")"
+    },
+    {
+      "chunk_id": "nimbus-sdk-python::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "Reading a device's state",
+      "source_type": "code",
+      "text": "lock = client.devices.get(\"dev_7f2a\")\nprint(lock.state)"
+    },
+    {
+      "chunk_id": "nimbus-sdk-python::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "Listing devices with a filter",
+      "source_type": "code",
+      "text": "locks = client.devices.list(\n    type=\"smart_lock\",\n    room_id=\"rm_1c88\",\n)"
+    },
+    {
+      "chunk_id": "nimbus-sdk-python::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Error handling",
+      "source_type": "code",
+      "text": "from nimbus import NimbusAPIError\ntry:\n    client.devices.patch(\"bad_id\", state=\"unlocked\")\nexcept NimbusAPIError as e:\n    print(e.status_code, e.message)"
+    }
+  ]
+}

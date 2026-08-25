@@ -1,0 +1,47 @@
+{
+  "doc_id": "nimbus-guide-getting-started",
+  "title": "Getting Started with Nimbus",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "nimbus-guide-getting-started::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "Setting up your hub",
+      "source_type": "prose",
+      "text": "Plug in the Nimbus Hub and open the Nimbus app to begin setup. The app finds the hub over your local Wi-Fi network automatically; if it isn't found within a minute, hold the hub's reset button for five seconds to restart discovery."
+    },
+    {
+      "chunk_id": "nimbus-guide-getting-started::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Adding your first device",
+      "source_type": "prose",
+      "text": "From the app's Devices tab, tap Add Device and select the device type. Most Zigbee and Z-Wave devices pair automatically once put into pairing mode; Wi-Fi devices require entering your home network's password once."
+    },
+    {
+      "chunk_id": "nimbus-guide-getting-started::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "Creating rooms",
+      "source_type": "prose",
+      "text": "Rooms group devices for easier control. Create a room from Settings > Rooms, then assign each device to a room from its device detail page. A device can belong to only one room at a time."
+    },
+    {
+      "chunk_id": "nimbus-guide-getting-started::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "Notifications",
+      "source_type": "prose",
+      "text": "The Nimbus app sends push notifications for door/window sensor triggers and low device battery by default. You can turn off any notification category individually from Settings > Notifications."
+    },
+    {
+      "chunk_id": "nimbus-guide-getting-started::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Mobile app",
+      "source_type": "prose",
+      "text": "The Nimbus mobile app is available for iPhone and Android and mirrors every feature in the web dashboard, including live camera viewing and remote automation control."
+    }
+  ]
+}

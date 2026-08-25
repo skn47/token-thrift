@@ -1,0 +1,51 @@
+{"question_id": "n01", "question_text": "How do I get the hub to find my devices during setup?", "doc_id": "nimbus-guide-getting-started", "chunk_id": "nimbus-guide-getting-started::c0", "relevant": true}
+{"question_id": "n02", "question_text": "How do I pair a Wi-Fi device with Nimbus?", "doc_id": "nimbus-guide-getting-started", "chunk_id": "nimbus-guide-getting-started::c1", "relevant": true}
+{"question_id": "n03", "question_text": "Can a device belong to more than one room?", "doc_id": "nimbus-guide-getting-started", "chunk_id": "nimbus-guide-getting-started::c2", "relevant": true}
+{"question_id": "n04", "question_text": "How do I turn off low battery notifications?", "doc_id": "nimbus-guide-getting-started", "chunk_id": "nimbus-guide-getting-started::c3", "relevant": true}
+{"question_id": "n05", "question_text": "Does the Nimbus app support viewing cameras live?", "doc_id": "nimbus-guide-getting-started", "chunk_id": "nimbus-guide-getting-started::c4", "relevant": true}
+{"question_id": "n06", "question_text": "What happens to a routine if it has no conditions?", "doc_id": "nimbus-guide-automations", "chunk_id": "nimbus-guide-automations::c1", "relevant": true}
+{"question_id": "n07", "question_text": "What is a scene in Nimbus?", "doc_id": "nimbus-guide-automations", "chunk_id": "nimbus-guide-automations::c2", "relevant": true}
+{"question_id": "n08", "question_text": "How many automations can one account have?", "doc_id": "nimbus-guide-automations", "chunk_id": "nimbus-guide-automations::c3", "relevant": true}
+{"question_id": "n09", "question_text": "What can a Guest control in someone else's household?", "doc_id": "nimbus-guide-sharing", "chunk_id": "nimbus-guide-sharing::c4", "relevant": true}
+{"question_id": "n10", "question_text": "Who can invite new members to a household?", "doc_id": "nimbus-guide-sharing", "chunk_id": "nimbus-guide-sharing::c2", "relevant": true}
+{"question_id": "n11", "question_text": "Who is allowed to delete an entire household?", "doc_id": "nimbus-guide-sharing", "chunk_id": "nimbus-guide-sharing::c1", "relevant": true}
+{"question_id": "n12", "question_text": "Is data encrypted between the hub and the cloud?", "doc_id": "nimbus-guide-security", "chunk_id": "nimbus-guide-security::c0", "relevant": true}
+{"question_id": "n13", "question_text": "Do automations still run if the internet goes down?", "doc_id": "nimbus-guide-security", "chunk_id": "nimbus-guide-security::c3", "relevant": true}
+{"question_id": "n14", "question_text": "What fields are returned when I fetch a single device?", "doc_id": "nimbus-api-devices", "chunk_id": "nimbus-api-devices::c1", "relevant": true}
+{"question_id": "n15", "question_text": "How do I unlock a smart lock through the API?", "doc_id": "nimbus-api-devices", "chunk_id": "nimbus-api-devices::c2", "relevant": true}
+{"question_id": "n16", "question_text": "What response headers show my remaining API requests?", "doc_id": "nimbus-api-devices", "chunk_id": "nimbus-api-devices::c3", "relevant": true}
+{"question_id": "n17", "question_text": "How do I get an access token to call the Nimbus API?", "doc_id": "nimbus-api-auth", "chunk_id": "nimbus-api-auth::c1", "relevant": true}
+{"question_id": "n18", "question_text": "How can I refresh an expired access token without logging in again?", "doc_id": "nimbus-api-auth", "chunk_id": "nimbus-api-auth::c2", "relevant": true}
+{"question_id": "n19", "question_text": "What trigger types are supported for API-created automations?", "doc_id": "nimbus-api-automations", "chunk_id": "nimbus-api-automations::c0", "relevant": true}
+{"question_id": "n20", "question_text": "How do I create an automation that turns on a light at sunset via the API?", "doc_id": "nimbus-api-automations", "chunk_id": "nimbus-api-automations::c1", "relevant": true}
+{"question_id": "n21", "question_text": "What happens to an automation's referenced device if I delete it through the API?", "doc_id": "nimbus-api-automations", "chunk_id": "nimbus-api-automations::c3", "relevant": true}
+{"question_id": "n22", "question_text": "How do I install the Nimbus Python SDK?", "doc_id": "nimbus-sdk-python", "chunk_id": "nimbus-sdk-python::c0", "relevant": true}
+{"question_id": "n23", "question_text": "How do I read a device's current state using the Python SDK?", "doc_id": "nimbus-sdk-python", "chunk_id": "nimbus-sdk-python::c2", "relevant": true}
+{"question_id": "n24", "question_text": "How much cloud video storage does the Plus plan include?", "doc_id": "nimbus-pricing-table", "chunk_id": "nimbus-pricing-table::c1", "relevant": true}
+{"question_id": "n25", "question_text": "Does the Free plan include geofencing?", "doc_id": "nimbus-pricing-table", "chunk_id": "nimbus-pricing-table::c0", "relevant": true}
+{"question_id": "n26", "question_text": "What API rate limit applies to the Pro plan?", "doc_id": "nimbus-pricing-table", "chunk_id": "nimbus-pricing-table::c2", "relevant": true}
+{"question_id": "n27", "question_text": "How does a Zigbee device get paired with the hub?", "doc_id": "nimbus-device-compatibility", "chunk_id": "nimbus-device-compatibility::c0", "relevant": true}
+{"question_id": "n28", "question_text": "Is a video doorbell a supported device type?", "doc_id": "nimbus-device-compatibility", "chunk_id": "nimbus-device-compatibility::c1", "relevant": true}
+{"question_id": "n29", "question_text": "What Wi-Fi frequency does the hub require?", "doc_id": "nimbus-system-requirements", "chunk_id": "nimbus-system-requirements::c0", "relevant": true}
+{"question_id": "n30", "question_text": "What does a 429 status code mean?", "doc_id": "nimbus-status-codes", "chunk_id": "nimbus-status-codes::c1", "relevant": true}
+{"question_id": "n31", "question_text": "What does a 204 response mean when I delete an automation?", "doc_id": "nimbus-status-codes", "chunk_id": "nimbus-status-codes::c0", "relevant": true}
+{"question_id": "n32", "question_text": "Can I change my Nimbus plan in the middle of a billing cycle?", "doc_id": "nimbus-faq-billing", "chunk_id": "nimbus-faq-billing::c0", "relevant": true}
+{"question_id": "n33", "question_text": "What payment methods does Nimbus accept for annual Pro billing?", "doc_id": "nimbus-faq-billing", "chunk_id": "nimbus-faq-billing::c1", "relevant": true}
+{"question_id": "n34", "question_text": "Where can I download a copy of my invoice?", "doc_id": "nimbus-faq-billing", "chunk_id": "nimbus-faq-billing::c2", "relevant": true}
+{"question_id": "n35", "question_text": "If my payment fails and my household gets downgraded to Free, do I lose footage I already recorded?", "doc_id": "nimbus-faq-billing", "chunk_id": "nimbus-faq-billing::c3", "relevant": true}
+{"question_id": "n35", "question_text": "If my payment fails and my household gets downgraded to Free, do I lose footage I already recorded?", "doc_id": "nimbus-faq-billing", "chunk_id": "nimbus-faq-billing::c4", "relevant": true}
+{"question_id": "n36", "question_text": "Can I get my money back after being charged?", "doc_id": "nimbus-faq-billing", "chunk_id": "nimbus-faq-billing::c5", "relevant": true}
+{"question_id": "n37", "question_text": "How do I reset a forgotten password?", "doc_id": "nimbus-faq-account", "chunk_id": "nimbus-faq-account::c0", "relevant": true}
+{"question_id": "n38", "question_text": "After I transfer household ownership to someone else, what role do I end up with?", "doc_id": "nimbus-faq-account", "chunk_id": "nimbus-faq-account::c2", "relevant": true}
+{"question_id": "n38", "question_text": "After I transfer household ownership to someone else, what role do I end up with?", "doc_id": "nimbus-faq-account", "chunk_id": "nimbus-faq-account::c3", "relevant": true}
+{"question_id": "n39", "question_text": "Can an Admin promote a Guest to a full Member?", "doc_id": "nimbus-faq-account", "chunk_id": "nimbus-faq-account::c4", "relevant": true}
+{"question_id": "n40", "question_text": "Does Nimbus keep working at all without an internet connection?", "doc_id": "nimbus-faq-technical", "chunk_id": "nimbus-faq-technical::c0", "relevant": true}
+{"question_id": "n41", "question_text": "Why do I keep getting rate limited when calling the API?", "doc_id": "nimbus-faq-technical", "chunk_id": "nimbus-faq-technical::c1", "relevant": true}
+{"question_id": "n42", "question_text": "How many active routines am I allowed to have, and where is that documented?", "doc_id": "nimbus-faq-technical", "chunk_id": "nimbus-faq-technical::c2", "relevant": true}
+{"question_id": "n42", "question_text": "How many active routines am I allowed to have, and where is that documented?", "doc_id": "nimbus-guide-automations", "chunk_id": "nimbus-guide-automations::c3", "relevant": true}
+{"question_id": "n43", "question_text": "How do I export all of my Nimbus data?", "doc_id": "nimbus-faq-technical", "chunk_id": "nimbus-faq-technical::c3", "relevant": true}
+{"question_id": "n44", "question_text": "Is two-factor authentication required for everyone in my household?", "doc_id": "nimbus-faq-security", "chunk_id": "nimbus-faq-security::c0", "relevant": true}
+{"question_id": "n44", "question_text": "Is two-factor authentication required for everyone in my household?", "doc_id": "nimbus-guide-security", "chunk_id": "nimbus-guide-security::c1", "relevant": true}
+{"question_id": "n45", "question_text": "Where is my account data hosted by default?", "doc_id": "nimbus-faq-security", "chunk_id": "nimbus-faq-security::c1", "relevant": true}
+{"question_id": "n46", "question_text": "How do I take part in Nimbus's bug bounty and report a vulnerability I found?", "doc_id": "nimbus-faq-security", "chunk_id": "nimbus-faq-security::c2", "relevant": true}
+{"question_id": "n46", "question_text": "How do I take part in Nimbus's bug bounty and report a vulnerability I found?", "doc_id": "nimbus-faq-security", "chunk_id": "nimbus-faq-security::c3", "relevant": true}

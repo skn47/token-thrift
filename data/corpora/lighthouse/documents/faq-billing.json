@@ -1,0 +1,55 @@
+{
+  "doc_id": "faq-billing",
+  "title": "Billing FAQ",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "faq-billing::c0",
+      "position": 0,
+      "doc_chunk_count": 6,
+      "heading": "Can I change plans mid-cycle?",
+      "source_type": "prose",
+      "text": "Yes. Upgrades take effect immediately and you are charged a prorated amount for the rest of the billing cycle. Downgrades take effect at your next renewal date."
+    },
+    {
+      "chunk_id": "faq-billing::c1",
+      "position": 1,
+      "doc_chunk_count": 6,
+      "heading": "What payment methods are accepted?",
+      "source_type": "prose",
+      "text": "Credit card is accepted on the Free and Team plans. Enterprise plans billed annually may also pay by ACH bank transfer against an invoice."
+    },
+    {
+      "chunk_id": "faq-billing::c2",
+      "position": 2,
+      "doc_chunk_count": 6,
+      "heading": "How do I get a copy of an invoice?",
+      "source_type": "prose",
+      "text": "Open the Billing page and click the Invoices tab. Every past invoice can be downloaded as a PDF from there."
+    },
+    {
+      "chunk_id": "faq-billing::c3",
+      "position": 3,
+      "doc_chunk_count": 6,
+      "heading": "What happens if a payment fails?",
+      "source_type": "prose",
+      "text": "There is a 7 day grace period after a failed payment during which the workspace keeps working normally. If payment still has not succeeded after 14 days, the workspace is automatically downgraded to the Free plan."
+    },
+    {
+      "chunk_id": "faq-billing::c4",
+      "position": 4,
+      "doc_chunk_count": 6,
+      "heading": "Is data lost when a workspace is auto-downgraded to Free?",
+      "source_type": "prose",
+      "text": "No data is deleted when a workspace is downgraded. Projects beyond the Free plan's project limit simply become read-only until you either upgrade again or remove projects to fit within the limit."
+    },
+    {
+      "chunk_id": "faq-billing::c5",
+      "position": 5,
+      "doc_chunk_count": 6,
+      "heading": "Can I get a refund?",
+      "source_type": "prose",
+      "text": "Refunds are only available for charges made within the last 14 days, and are prorated based on the unused portion of the billing period."
+    }
+  ]
+}

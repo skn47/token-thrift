@@ -1,0 +1,47 @@
+{
+  "doc_id": "faq-account",
+  "title": "Account and Access FAQ",
+  "doc_type": "prose",
+  "chunks": [
+    {
+      "chunk_id": "faq-account::c0",
+      "position": 0,
+      "doc_chunk_count": 5,
+      "heading": "How do I reset my password?",
+      "source_type": "prose",
+      "text": "Click Forgot password on the login screen and follow the emailed reset link. No workspace admin needs to be involved."
+    },
+    {
+      "chunk_id": "faq-account::c1",
+      "position": 1,
+      "doc_chunk_count": 5,
+      "heading": "Can I merge two accounts?",
+      "source_type": "prose",
+      "text": "Account merging is not currently automated. Contact support with both account email addresses and a support engineer will merge them manually."
+    },
+    {
+      "chunk_id": "faq-account::c2",
+      "position": 2,
+      "doc_chunk_count": 5,
+      "heading": "How do I transfer workspace ownership?",
+      "source_type": "prose",
+      "text": "The current Owner can go to Workspace Settings > Transfer Ownership and select any existing Admin as the new Owner."
+    },
+    {
+      "chunk_id": "faq-account::c3",
+      "position": 3,
+      "doc_chunk_count": 5,
+      "heading": "What role does the previous owner get after a transfer?",
+      "source_type": "prose",
+      "text": "The previous Owner is automatically demoted to Admin. They keep full management access except for billing changes, which are locked for 24 hours as a safety cooldown."
+    },
+    {
+      "chunk_id": "faq-account::c4",
+      "position": 4,
+      "doc_chunk_count": 5,
+      "heading": "Can Guests be promoted to Members?",
+      "source_type": "prose",
+      "text": "Yes. Any Admin or Owner can promote a Guest to a full Member from the workspace members list."
+    }
+  ]
+}
