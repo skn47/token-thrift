@@ -36,6 +36,60 @@ The model is a single `SGDClassifier(loss="log_loss")` — inference is a dot
 product, not a network call. No GPU, no vector database, no extra service
 to run. It's a library-sized addition to a RAG pipeline you already have.
 
+## Try it with Claude Code
+
+This is the fastest way to see TokenThrift do something real — no
+Streamlit, no bundled demo corpus, just your own Claude Code session
+using less context. Two terminals, three commands.
+
+**1. Terminal 1 — start the proxy**, pointed at the real Anthropic API,
+with tool-result auto-marking already on so the very first request shows
+something:
+
+```bash
+TOKENTHRIFT_UPSTREAM_BASE_URL=https://api.anthropic.com \
+TOKENTHRIFT_AUTO_MARK_TOOL_RESULTS=1 \
+  uv run python -m tokenthrift.proxy.server
+```
+
+Leave this terminal open — it's where you'll watch TokenThrift work.
+
+**2. Terminal 2 — point Claude Code at the proxy and use it normally:**
+
+```bash
+export ANTHROPIC_BASE_URL=http://localhost:8787
+claude
+```
+
+This reuses whatever Claude Code auth you already have — the proxy only
+forwards your API key to Anthropic, it never stores it.
+
+**3. Ask it something that makes it read a few files** — e.g. *"explain
+how error handling works in this repo."* Claude Code will read files,
+grep, maybe run a command: ordinary tool use, nothing special about the
+question.
+
+**How you'll know it's working:** watch Terminal 1. Every time Claude
+Code's tool results (file reads, grep output, command output) get
+pruned, you'll see a line like this appear:
+
+```
+[TokenThrift] pruned 812 tokens from this request
+```
+
+That's it — nothing to install inside Claude Code, no plugin, no config
+file. The proxy sits between Claude Code and Anthropic's API and trims
+tool output down to what's relevant to your question before it ever
+reaches the model, on every request, automatically.
+
+**Turning it off** is just as simple: stop the proxy (`Ctrl+C` in
+Terminal 1) and `unset ANTHROPIC_BASE_URL` — Claude Code talks straight
+to Anthropic again, no trace of TokenThrift left behind.
+
+Full technical details on exactly what gets touched and what doesn't:
+[the Proxy section below](#proxy-using-tokenthrift-with-a-real-coding-agent) ·
+[Claude Code integration notes](docs/integrations/claude-code.md).
+
 ## How it works
 
 ```
@@ -212,6 +266,20 @@ Question: Explain authentication.
 and only *then* does the proxy prune the marked material down to
 whatever's actually relevant to "Explain authentication" before it
 reaches the model.
+
+**One exception, added on top of manual markers:** tool-result content —
+OpenAI `role: "tool"` messages and Anthropic `tool_result` content
+blocks — carries a structural signal the wire format already provides,
+so it can be recognized without a marker at all. Turn on "Auto-mark tool
+results" in the Streamlit sidebar's Proxy panel (or set
+`TOKENTHRIFT_AUTO_MARK_TOOL_RESULTS=1` before starting the proxy) and any
+tool output flowing through the proxy — file reads, command output, doc
+lookups — gets pruned the same way marked text does, no code changes on
+the agent side. It's still opt-in (off by default) and still scoped: a
+file you paste into a prompt yourself, outside a tool result, still needs
+a manual marker. See [docs/integrations/](docs/integrations/) for
+per-agent notes — Claude Code works today; Codex does not yet, and that
+page explains exactly why.
 
 ### What "running" means
 

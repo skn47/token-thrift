@@ -2,7 +2,11 @@ import httpx
 
 from tokenthrift.generation.providers import WIRE_ANTHROPIC, WIRE_OPENAI
 from tokenthrift.proxy.server import TOKENS_PRUNED_HEADER
-from tokenthrift.ui.proxy_client import call_through_proxy, check_health
+from tokenthrift.ui.proxy_client import (
+    call_through_proxy,
+    check_health,
+    set_auto_mark_tool_results,
+)
 
 
 def _response(json_body, headers=None, status_code=200):
@@ -21,6 +25,18 @@ def test_check_health_reports_reachable_config(monkeypatch):
     assert health.upstream_configured is True
     assert health.policy_preset == "balanced"
     assert health.error is None
+
+
+def test_check_health_reports_auto_mark_tool_results(monkeypatch):
+    monkeypatch.setattr(
+        httpx, "get",
+        lambda url, timeout=None: _response({
+            "status": "ok", "upstream_configured": True, "policy_preset": "balanced",
+            "auto_mark_tool_results": True,
+        }))
+
+    health = check_health("http://localhost:8787")
+    assert health.auto_mark_tool_results is True
 
 
 def test_check_health_reports_unreachable_without_raising(monkeypatch):
@@ -95,3 +111,25 @@ def test_call_through_proxy_connection_error_is_reported_not_raised(monkeypatch)
         "http://localhost:8787", WIRE_OPENAI, "sk-test", "m", "prompt")
     assert result.error is not None
     assert result.text == ""
+
+
+def test_set_auto_mark_tool_results_success(monkeypatch):
+    captured = {}
+
+    def _fake_post(url, json=None, timeout=None):
+        captured["url"] = url
+        captured["json"] = json
+        return _response({"auto_mark_tool_results": True})
+
+    monkeypatch.setattr(httpx, "post", _fake_post)
+    assert set_auto_mark_tool_results("http://localhost:8787", True) is True
+    assert captured["url"] == "http://localhost:8787/v1/config"
+    assert captured["json"] == {"auto_mark_tool_results": True}
+
+
+def test_set_auto_mark_tool_results_failure_is_reported_not_raised(monkeypatch):
+    def _raise(url, json=None, timeout=None):
+        raise httpx.ConnectError("connection refused")
+
+    monkeypatch.setattr(httpx, "post", _raise)
+    assert set_auto_mark_tool_results("http://localhost:8787", True) is False

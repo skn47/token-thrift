@@ -21,6 +21,7 @@ class ProxyHealth:
     reachable: bool
     upstream_configured: bool | None
     policy_preset: str | None
+    auto_mark_tool_results: bool | None = None
     error: str | None = None
 
 
@@ -39,7 +40,23 @@ def check_health(proxy_base_url: str) -> ProxyHealth:
         reachable=True,
         upstream_configured=payload.get("upstream_configured"),
         policy_preset=payload.get("policy_preset"),
+        auto_mark_tool_results=payload.get("auto_mark_tool_results"),
     )
+
+
+def set_auto_mark_tool_results(proxy_base_url: str, enabled: bool) -> bool:
+    """Flips the running proxy's tool-result auto-marking on or off — the
+    one piece of proxy state a caller can change over HTTP. Non-raising,
+    like check_health: a bad connection just reports failure rather than
+    crashing the sidebar."""
+    try:
+        response = httpx.post(
+            f"{proxy_base_url.rstrip('/')}/v1/config",
+            json={"auto_mark_tool_results": enabled}, timeout=HEALTH_TIMEOUT_SECONDS)
+        response.raise_for_status()
+    except httpx.HTTPError:
+        return False
+    return True
 
 
 @dataclass(frozen=True)

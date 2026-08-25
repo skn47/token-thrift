@@ -58,3 +58,42 @@ def test_proxy_disabled_never_shows_the_live_panel(monkeypatch):
     assert not at.exception
     subheaders = [s.value for s in at.subheader]
     assert "🔌 Live via TokenThrift Proxy" not in subheaders
+
+
+def test_auto_mark_toggle_renders_off_by_default():
+    at = AppTest.from_file(str(APP_PATH), default_timeout=60)
+    at.run()
+    assert not at.exception
+    assert at.toggle(key="proxy_auto_mark_toggle").value is False
+
+
+def test_flipping_auto_mark_toggle_calls_set_auto_mark_tool_results(monkeypatch):
+    captured = {}
+
+    def _fake_set(proxy_base_url: str, enabled: bool) -> bool:
+        captured["proxy_base_url"] = proxy_base_url
+        captured["enabled"] = enabled
+        return True
+
+    monkeypatch.setattr("tokenthrift.ui.sidebar.set_auto_mark_tool_results", _fake_set)
+
+    at = AppTest.from_file(str(APP_PATH), default_timeout=60)
+    at.run()
+    at.toggle(key="proxy_auto_mark_toggle").set_value(True).run()
+
+    assert not at.exception
+    assert captured["enabled"] is True
+    assert captured["proxy_base_url"] == "http://localhost:8787"
+
+
+def test_auto_mark_toggle_shows_error_when_proxy_unreachable(monkeypatch):
+    monkeypatch.setattr(
+        "tokenthrift.ui.sidebar.set_auto_mark_tool_results", lambda *a, **k: False)
+
+    at = AppTest.from_file(str(APP_PATH), default_timeout=60)
+    at.run()
+    at.toggle(key="proxy_auto_mark_toggle").set_value(True).run()
+
+    assert not at.exception
+    captions = [c.value for c in at.caption]
+    assert any("Could not reach the proxy" in c for c in captions)

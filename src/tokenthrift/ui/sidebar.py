@@ -13,7 +13,7 @@ from tokenthrift.generation.providers import DEFAULT_PROVIDER_ID, PROVIDER_PRESE
 from tokenthrift.safety.policy import PRESETS
 from tokenthrift.session.calibration import MAX_THRESHOLD, MIN_THRESHOLD
 from tokenthrift.session.state import SessionState
-from tokenthrift.ui.proxy_client import check_health
+from tokenthrift.ui.proxy_client import check_health, set_auto_mark_tool_results
 
 DEFAULT_PROXY_URL = "http://localhost:8787"
 
@@ -210,6 +210,19 @@ def _render_session_section(
             st.rerun()
 
 
+def _sync_auto_mark_toggle() -> None:
+    """on_change callback for the auto-mark toggle — pushes the new value to
+    the running proxy immediately (rather than waiting for some other
+    widget interaction to notice it changed), so the checkbox is the actual
+    write path, not just local UI state."""
+    proxy_base_url = st.session_state.get("proxy_base_url_input", DEFAULT_PROXY_URL)
+    enabled = st.session_state["proxy_auto_mark_toggle"]
+    if set_auto_mark_tool_results(proxy_base_url, enabled):
+        st.session_state.pop("_proxy_auto_mark_error", None)
+    else:
+        st.session_state["_proxy_auto_mark_error"] = True
+
+
 def _render_proxy_section() -> tuple[str, bool]:
     with st.sidebar.container(border=True):
         st.markdown("**🔌 Proxy (optional)**")
@@ -222,14 +235,25 @@ def _render_proxy_section() -> tuple[str, bool]:
                  "proxy in front of your provider — the same call a coding "
                  "agent pointed at this proxy would make — and shows what "
                  "it actually pruned.")
+        st.toggle(
+            "Auto-mark tool results (Codex, Claude Code, etc.)", value=False,
+            key="proxy_auto_mark_toggle", on_change=_sync_auto_mark_toggle,
+            help="Prunes tool-result content (file reads, command output, "
+                 "doc lookups) on the running proxy without needing "
+                 "<tokenthrift:context> markers. Applies to every request "
+                 "the proxy handles, not just this panel — plain pasted "
+                 "text outside a tool result still needs manual markers.")
+        if st.session_state.get("_proxy_auto_mark_error"):
+            st.caption("⚠️ Could not reach the proxy to update this setting.")
         if st.button("Check connection", key="proxy_health_button"):
             health = check_health(proxy_base_url)
             if health.reachable:
                 upstream_status = (
                     "configured" if health.upstream_configured else "NOT configured")
+                auto_mark_status = "on" if health.auto_mark_tool_results else "off"
                 st.success(
                     f"Reachable · upstream {upstream_status} · "
-                    f"policy: {health.policy_preset}")
+                    f"policy: {health.policy_preset} · auto-mark: {auto_mark_status}")
             else:
                 st.error(f"Unreachable: {health.error}")
 
